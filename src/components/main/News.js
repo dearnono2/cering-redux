@@ -7,8 +7,8 @@ function News() {
 
   const getLocalData = () => {
     const dummyPosts = [
-      {title: 'Hello5', content: 'Here comes description in details'},
-      {title: 'Hello4', content: 'Here comes description in details'},
+      // {title: 'Hello5', content: 'Here comes description in details'},
+      // {title: 'Hello4', content: 'Here comes description in details'},
       {title: 'Hello3', content: 'Here comes description in details'},
       {title: 'Hello2', content: 'Here comes description in details'},
       {title: 'Hello1', content: 'Here comes description in details'},
@@ -32,7 +32,7 @@ function News() {
 
   return(
 
-    <main id="news" className='myScroll'>
+    <main id="news" className='myScroll b-line'>
       <h2>● FEATURED NEWS</h2>
       {Posts.map((post, idx) => {
         if(idx >= 5) return; // 5개의 인덱스만 가져다 달라는 의미
