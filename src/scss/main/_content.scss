@@ -1,0 +1,88 @@
+section {
+  width: 100%;
+  background: #f2f2f2;
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 100px;
+    h2 {
+      font-size: 20px;
+      margin-bottom: 80px;
+    }
+    .about-content {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 100px;
+      .about-content-left {
+        display: flex;
+        flex: 1;
+        p {
+          font-weight: bold;
+          margin-right: 130px;
+          &:nth-of-type(1) {
+            font-size: 50px;
+            
+          }
+          &:nth-of-type(2) {
+            font-size: 40px;
+          }
+        }
+        // 되는지 안되는지 확인해보고 삭제하자. circle-effect
+        .circle-effect {
+          position: relative;
+          width: 120px; height: 120px;
+          border-radius: 50%;
+          background: #ccc;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .img {
+            position: absolute;
+            width: 80px; height: 80px;
+            border-radius: 50%;
+          }
+          .text {
+            position: absolute;
+            width: 100%; height: 100%;
+            p {
+              font-size: 24px;
+            }
+            span {
+              position: absolute;
+              left: 50%;
+              transform-origin: 0 100px;
+              
+            }
+          }
+        }
+      }
+      .about-content-right {
+        flex: 1;
+        padding-left: 100px;
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.5em;
+          margin-bottom: 60px;
+        }
+        button {
+          width: 140px; height: 30px;
+          font-size: 10px;
+          border-radius: 14px;
+        }
+      }
+    }
+    .about-brands-logo {
+      display: flex;
+      padding: 100px 20px;
+      justify-content:space-between;
+    }
+    // 브랜드 로고 사이 구분선
+    // &::after {
+    //   display: block;
+    //   content: '';
+    //   border-bottom: 1px solid #000;
+    //   width: 100%; height: 1px;
+    // }
+  }
+}

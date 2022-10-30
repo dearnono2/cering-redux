@@ -1,0 +1,98 @@
+#vids {
+	width: 100%;
+	height: 100%;
+	// background: #f2f2f2;
+	position: relative;
+
+	h3 {
+		padding-top: 80px;
+		font-size: 50px;
+		text-align: center;
+	}
+
+	.swiper {
+		height: 100%;
+		padding: 10vh 0px 20vh;
+
+		.swiper-slide {
+			width: 600px;
+
+			.inner {
+				width: 100%;
+				height: 100%;
+				padding: 30px;
+				background: #fff;
+				opacity: 0.5;
+				transform: scale(0.8);
+				transition: opacity 0.5s, transform 0.5s;
+
+				.pic {
+					position: relative;
+					width: 100%;
+					height: 300px;
+					overflow: hidden;
+					margin-bottom: 20px;
+          cursor: pointer;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					.font-awesome {
+						position: absolute;
+						top: 50%; left: 50%;
+						font-size: 50px;
+						color: #eee;
+						transform: translate(-50%, -50%);
+						opacity: 0;
+						transition: 0.5s;
+					}
+					&:hover .font-awesome {
+						opacity: 1;
+					}
+				}
+
+				h2 {
+					font: normal 20px/1 'work sans';
+					font-weight: 600;
+					color: #333;
+				}
+			}
+			&.swiper-slide-active {
+				.inner {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+
+		.swiper-pagination {
+			bottom: 40px;
+			filter: grayscale(1) brightness(4);
+			z-index: 5;
+
+			.swiper-pagination-bullet {
+				border-radius: 4px;
+				transition: 0.5s;
+			}
+
+			.swiper-pagination-bullet-active {
+				width: 80px;
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			top: auto;
+			bottom: 30px;
+			transform: scale(0.5);
+			filter: grayscale(1) brightness(4);
+			z-index: 6;
+		}
+		.swiper-button-prev {
+			left: auto;
+			right: 60px;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+  "members": [
+    {
+      "name": "Julia Bailey",
+      "position": "President",
+      "pic": "member1.jpg"
+    },
+    {
+      "name": "David Johnson",
+      "position": "Vice President",
+      "pic": "member2.jpg"
+    },
+    {
+      "name": "Emily Miller",
+      "position": "UI Designer",
+      "pic": "member3.jpg"
+    },
+    {
+      "name": "Paul Patel",
+      "position": "Front-end Engineer",
+      "pic": "member4.jpg"
+    },
+    {
+      "name": "Sara Perez",
+      "position": "Back-end Engineer",
+      "pic": "member5.jpg"
+    },
+    {
+      "name": "Michael Sanchez",
+      "position": "Project Manager",
+      "pic": "member6.jpg"
+    }
+  ]
+}
