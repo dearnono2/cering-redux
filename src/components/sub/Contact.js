@@ -114,7 +114,7 @@ export default function Contact() {
   return (
     <Layout name={'Contact'}>
       <div className="inner">
-        <h2>● CONTACT</h2>
+        <h2>● CONTACT US</h2>
         <div id="map" ref={container}></div>
         <div className="btnSet">
           {/* 기존의 두개의 버튼에서 한개의 토글 버튼으로 바꿈.

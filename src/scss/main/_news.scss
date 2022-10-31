@@ -58,3 +58,12 @@
     }
   }
 }
+
+// mobile
+@media screen and (max-width: $mobile) {
+  #news {
+    article {
+      width: 80%;
+    }
+  }
+}

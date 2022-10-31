@@ -9,6 +9,7 @@
       h2 {
         font-size: 70px;
         margin-bottom: 0;
+        width: 100%;
       }
     }
     .coworker-pic {
@@ -33,6 +34,7 @@
       .about-content {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding-bottom: 100px;
         .about-content-left {
           display: flex;
@@ -160,16 +162,46 @@
 
 // tablet
 @media screen and (max-width: $tablet) {
-  .Department {
-    >.inner {
-      article {
-        width: 50%;
-        margin-bottom: 40px;
-        .inner {
-          .pic {
-            height: 260px;
+  .About {
+    .sub-visual {
+      width: 100%;
+      .inner {
+        height: 400px;
+        h2 {
+        }
+        article {
+          width: 50%;
+          margin-bottom: 40px;
+          .inner {
+            .pic {
+              height: 260px;
+            }
           }
         }
+      }
+      
+    }
+    #about {
+      .inner {
+        .about-content {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%; height: 500px;
+          .about-content-left {
+            width: 550px;
+          }
+          .about-content-right {
+            width: 550px;
+            padding: 0;
+            p {
+              width: 100%;
+            }
+
+          }
+        }
+      }
+      .simple-about-box {
+        flex-wrap: wrap;
       }
     }
   }
@@ -177,17 +209,25 @@
 
 // mobile
 @media screen and (max-width: $mobile) {
-  .Department {
-    >.inner {
-      article {
-        width: 100%;
-        margin-bottom: 30px;
-        .inner {
-          .pic {
-            height: 200px;
+  .About {
+    .sub-visual {
+      width: 100%;
+      .inner {
+        width: 500px;
+        margin: 0 auto;
+        h2 {
+        }
+        article {
+          width: 50%;
+          margin-bottom: 40px;
+          .inner {
+            .pic {
+              height: 260px;
+            }
           }
         }
       }
+      
     }
   }
 }

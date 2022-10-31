@@ -21,11 +21,12 @@ export default function Gallery() {
 	const pop = useRef(null);
 
 
+
 	const showSearch = () => {
 		const result = input.current.value.trim();
 		input.current.value = '';
 
-		if (!result) return alert('검색어를 입력하세요');
+		if (!result) return alert('Enter your keyword!');
 
 		if (!EnableClick) return;
 		setEnableClick(false);
@@ -89,7 +90,7 @@ export default function Gallery() {
 				{Loading && (
 					<img
 						className="loading"
-						src={`${process.env.PUBLIC_URL}/img/6.gif`}
+						src={`${process.env.PUBLIC_URL}/img/loading.gif`}
 					/>
 				)}
 
@@ -102,7 +103,7 @@ export default function Gallery() {
 						</nav>
 
 						<div className="searchBox">
-							<input type="text" ref={input} placeholder='검색어를 입력하세요'
+							<input type="text" ref={input} placeholder='Enter your keyword'
 								onKeyUp={(e) => {
 									if (e.key === 'Enter') showSearch();
 								}} />

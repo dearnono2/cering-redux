@@ -38,13 +38,8 @@ const Menu = forwardRef((props, ref) => {
           </h1>
           <ul id="gnb">
             <li>
-              <NavLink to='/department' activeStyle={active}>
-                Department
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/community' activeStyle={active}>
-                Community
+              <NavLink to='/about' activeStyle={active}>
+                About
               </NavLink>
             </li>
             <li>
@@ -53,18 +48,13 @@ const Menu = forwardRef((props, ref) => {
               </NavLink>
             </li>
             <li>
-              <NavLink to='/youtube' activeStyle={active}>
-                Youtube
+              <NavLink to='/project' activeStyle={active}>
+                Project
               </NavLink>
             </li>
             <li>
-              <NavLink to='/location' activeStyle={active}>
-                Location
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to='/member' activeStyle={active}>
-                Member
+              <NavLink to='/contact' activeStyle={active}>
+                Contact
               </NavLink>
             </li>
           </ul>

@@ -2,9 +2,10 @@
   // 로딩 모션
   .loading {
     position: absolute;
-    top: 0; left: 50%;
+    top: 70%; left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+    width: 300px;
   }
   .inner {
     margin-bottom: 100px;

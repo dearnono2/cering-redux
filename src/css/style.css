@@ -358,9 +358,9 @@ header .inner .fa-bars {
 
 #news {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
-  padding: 10vw;
+  padding: 10vw 10vw 5vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -378,7 +378,7 @@ header .inner .fa-bars {
   min-height: 180px;
   border: 1px solid #888;
   padding: 20px;
-  margin: 10px;
+  margin: 20px 20px 50px;
   transform: translateY(100px) retateY(180deg);
   opacity: 0;
   transition-duration: 0.5s;
@@ -423,7 +423,7 @@ header .inner .fa-bars {
 
 section {
   width: 100%;
-  background: #f2f2f2;
+  background: #efefef;
 }
 section .inner {
   width: 1180px;
@@ -626,7 +626,6 @@ section .inner .about-brands-logo {
 
 section {
   width: 100%;
-  background: #f2f2f2;
 }
 section .inner {
   width: 1180px;
@@ -1057,10 +1056,11 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
 }
 .Gallery .loading {
   position: absolute;
-  top: 0;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
+  width: 300px;
 }
 .Gallery .inner {
   margin-bottom: 100px;

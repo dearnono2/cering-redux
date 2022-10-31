@@ -106,18 +106,21 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .Youtube {
-    article {
-      h3 {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .txt {
-        width: 100%;
-      }
-      .pic {
-        height: 120px;
-        margin-bottom: 0;
+  .Project {
+    .inner {
+      article {
+        h3 {
+          width: 100%;
+          margin-bottom: 20px;
+          display: none;
+        }
+        .txt {
+          width: 100%;
+        }
+        .pic {
+          height: 300px;
+          margin-bottom: 0;
+        }
       }
     }
   }
