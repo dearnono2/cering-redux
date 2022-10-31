@@ -14,6 +14,7 @@
     }
     .controls {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       nav {
@@ -52,6 +53,7 @@
     }
     
     .frame {
+      margin: 20px 0;
       transform: translateY(200px);
       opacity: 0;
       transition: all 0.5s;
@@ -71,6 +73,7 @@
         // masorny라는 컴포넌트를 이용할 예정이라 float을 쓴다.
         .inner {
           width: 100%;
+          margin: 20px 0;
           padding: 10px;
           background: #fff;
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
@@ -113,13 +116,38 @@
 }
 
 @media screen and (max-width: $tablet) {
-  section .frame article {
-    width: 33.3333%;
+  .Gallery {
+    .inner {
+      .controls {
+        .searchBox {
+          padding: 10px;
+        }
+      }
+      .frame {
+        article {
+          width: 33.3333%;
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: $mobile) {
-  section .frame article {
-    width: 100%;
+  .Gallery {
+    .inner {
+      .controls {
+        .searchBox {
+          button {
+            width: 74px;
+          }
+        }
+      }
+      .frame {
+        article {
+          width: 100%;
+        }
+      }
+    }
   }
+
 }
