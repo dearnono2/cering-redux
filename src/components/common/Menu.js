@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom'; 
 import { useEffect } from 'react';
 
+
 // Menu 컴포넌트를 화살표함수로 변경해서 forwardRef 메서드의 인수로 전달.
 const Menu = forwardRef((props, ref) => {
   const [Open, setOpen] = useState(false);
@@ -33,7 +34,8 @@ const Menu = forwardRef((props, ref) => {
         >
           <h1>
             <Link to='/'>
-              <img src={process.env.PUBLIC_URL+'/img/logo_w.png'} alt="logo" />
+              {/* <img src={process.env.PUBLIC_URL+'/img/logo_w.png'} alt="logo" /> */}
+              CERING
             </Link>
           </h1>
           <ul id="gnb">

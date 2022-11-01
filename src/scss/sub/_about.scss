@@ -166,8 +166,10 @@
     .sub-visual {
       width: 100%;
       .inner {
-        height: 400px;
+        width: 90%;
+        margin: 0 auto;
         h2 {
+          width: 100%;
         }
         article {
           width: 50%;
@@ -213,9 +215,8 @@
     .sub-visual {
       width: 100%;
       .inner {
-        width: 500px;
-        margin: 0 auto;
         h2 {
+          width: 100%;
         }
         article {
           width: 50%;
