@@ -59,6 +59,15 @@
   }
 }
 
+// tablet 
+@media screen and (max-width: $tablet) {
+  #news {
+    article {
+      width: 40%;
+    }
+  }
+}
+
 // mobile
 @media screen and (max-width: $mobile) {
   #news {

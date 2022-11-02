@@ -19,6 +19,8 @@ export default function Gallery() {
 	const frame = useRef(null);
 	const input = useRef(null);
 	const pop = useRef(null);
+	//useRef를 이용하여 컴포넌트가 재랜더링 되더라도 유지되는 boolean값 초기화
+	let SearchDone = useRef(false);
 
 
 
@@ -34,6 +36,9 @@ export default function Gallery() {
 		frame.current.classList.remove('on');
 		//axios함수에 적용될 Opt state값을 변경
 		setOpt({ type: 'search', tags: result, });
+		//showSearch함수가 실행되면 useRef의 참조값을 true로 변경
+		//해당 함수가 호출되었는지 아닌지를 판단하기 위함
+		SearchDone.current = true;
 	};
 
 	const showInterest = () => {
@@ -76,11 +81,18 @@ export default function Gallery() {
 	//store로부터 최종 데이터가 전달이 되면
 	//컨텐츠 보이도록 처리
 	useEffect(() => {
-		setTimeout(() => {
-			frame.current.classList.add('on');
-			setLoading(false);
-			setEnableClick(true);
-		}, 500);
+		//ShowSearch함수가 한번 이상 호출되었고 그와 동시에 store로 부터 받은 결과값이 없으면
+		//검색 요청은 했으나 해당 결과값이 없으므로 검색결과 없음 경고창 호출
+		if(SearchDone.current && Items.length === 0) {
+			alert('There are no matching data found in the database');
+			dispatch({ type: types.FLICKR.start, Opt: { type: 'user', user: '196712274@N08' } })
+		} else {
+			setTimeout(() => {
+				frame.current.classList.add('on');
+				setLoading(false);
+				setEnableClick(true);
+			}, 500);
+		}
 	}, [Items])
 
 

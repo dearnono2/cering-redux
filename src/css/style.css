@@ -455,6 +455,11 @@ header .inner .fa-bars {
   transition-delay: 1s;
 }
 
+@media screen and (max-width: 1179px) {
+  #news article {
+    width: 40%;
+  }
+}
 @media screen and (max-width: 539px) {
   #news article {
     width: 80%;
@@ -1270,8 +1275,70 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
     width: 100%;
   }
 }
+.Contact {
+  width: 100%;
+}
 .Contact .inner h2 {
   font-size: 50px;
+}
+.Contact .inner .contact-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.Contact .inner .contact-section .contact-form {
+  width: 48%;
+  background: green;
+}
+.Contact .inner .contact-section .contact-form form fieldset {
+  background: orange;
+  width: 100%;
+  height: 400px;
+}
+.Contact .inner .contact-section .contact-form form fieldset table {
+  width: 100%;
+  border: none;
+}
+.Contact .inner .contact-section .contact-form form fieldset table tr:nth-of-type(1) {
+  background: red;
+}
+.Contact .inner .contact-section .contact-form form fieldset table tr:nth-of-type(2) {
+  background: yellow;
+}
+.Contact .inner .contact-section .contact-form form fieldset table tr:nth-of-type(3) {
+  background: green;
+}
+.Contact .inner .contact-section .contact-form form fieldset table th {
+  width: 20%;
+  border: none;
+  padding: 15px 30px;
+  text-align: left;
+}
+.Contact .inner .contact-section .contact-form form fieldset table th:last-child {
+  text-align: center;
+}
+.Contact .inner .contact-section .contact-form form fieldset table th input[type=reset],
+.Contact .inner .contact-section .contact-form form fieldset table th input[type=submit] {
+  width: 150px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.Contact .inner .contact-section .contact-form form fieldset table td .err {
+  font: 12px/1 "arial";
+  color: hotpink;
+  margin-left: 10px;
+}
+.Contact .inner .contact-section .contact-img {
+  width: 48%;
+}
+.Contact .inner .contact-section .contact-img img {
+  width: 100%;
+  height: 100%;
 }
 .Contact .inner #map {
   width: 100%;

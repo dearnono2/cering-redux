@@ -95,7 +95,7 @@
         width: 100%;
         flex-wrap: wrap;
         .text-box-left {
-          // width: 500px;
+          padding: 20px;
         }
         .text-box-right {
           // width: 500px;
@@ -105,3 +105,18 @@
     }
   }
 }
+
+// @media screen and (max-width: $tablet) {
+//   #visual {
+//     .inner {
+//       .text-box {
+//         .text-box-left {
+//         }
+//         .text-box-right {
+//           // width: 500px;
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }

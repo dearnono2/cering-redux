@@ -1,7 +1,92 @@
 import { useEffect, useRef, useState } from "react";
 import Layout from "../common/Layout"
+import { useHistory } from 'react-router-dom';
 
 export default function Contact() {
+
+  // 
+  // 이메일, 남기는 말 유효성 검사
+  // 
+  const history = useHistory();
+
+  const initVal = {
+    email: '',
+    comments: '',
+  };
+  // 해당 객체 값을 state에 초기값으로 저장
+  const [Val, setVal] = useState(initVal);
+
+  const [Err, setErr] = useState({});
+
+  const [Submit, setSubmit] = useState(false);
+
+  const check = (value) => {
+    const errs = {};
+
+    // email 인증은 8글자 이상, @가 있어야 한다.
+    if(value.email.length < 8 || !/@/.test(Val.email)) {
+      errs.email = '이메일은 8글자 이상 @를 포함하세요'
+    }
+
+    if(Val.comments.length < 20) {
+      errs.comments = '남기는 말을 20글자 이상 입력하세요';
+    }
+
+    return errs;
+  };
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setVal({ ...Val, [name]: value });
+  }
+
+  const handleRadio = (e) => {
+    const {name} = e.target;
+    const isChecked = e.target.checked;
+    setVal({...Val, [name]: isChecked})
+  }
+
+  const handleSelect = (e) => {
+    const {name} = e.target;
+    const isSelected = e.target.value;
+    setVal({...Val, [name]: isSelected });
+  }
+
+  const handleCheck = (e) => {
+    let isChecked = false;
+    const { name } = e.target;
+    const inputs = e.target.parentElement.querySelectorAll('input');
+    inputs.forEach((el) => {
+      if(el.checked) isChecked = true;
+    });
+    setVal({...Val, [name]: isChecked });
+  }
+
+  const handleReset = () => {
+    setSubmit(false);
+    setErr({});
+    setVal(initVal);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setErr(check(Val));
+  };
+
+  useEffect(() => {
+    const len = Object.keys(Err).length;
+    if(len === 0 && Submit) {
+      alert('전송 완료하였습니다. 메인페이지로 이동합니다.');
+      history.push('/youtube');
+    }
+  }, [Err]);
+
+
+
+  //
+  // 카카오 지도
+  //
 
   const { kakao } = window;
   // 윈도우 객체에 등록되어 있는 카카오키를 변수명으로 비구조화할당을 한것.
@@ -114,7 +199,75 @@ export default function Contact() {
   return (
     <Layout name={'Contact'}>
       <div className="inner">
-        <h2>● CONTACT US</h2>
+        <h2>● CONTACT US<br/>수정 및 추가예정</h2>
+        <div className="contact-section">
+          <div className="contact-form">
+            {/* 순서5. 전송버튼 클릭시 핸들 서브밋 함수를 호출 */}
+            <form onSubmit={handleSubmit}>
+              <fieldset>
+                {/* <legend className='h'>폼 양식</legend> */}
+                <table>
+                  {/* <caption className='h'>정보입력</caption> */}
+                  <tbody>
+                    {/* email */}
+                    <tr>
+                      <th scope='row'>
+                        <label htmlFor="email">E-MAIL</label>
+                      </th>
+                      <td>
+                        <input type="text"
+                                id='email'
+                                name='email'
+                                placeholder='EMAIL ADDDRESS*'
+                                value={Val.email}
+                                onChange={handleChange}
+                        />
+                        <span className='err'>{Err.email}</span>
+                      </td>
+                    </tr>
+                    {/* comments */}
+                    <tr>
+                      <th scope='row'>
+                        <label htmlFor="comments">COMMENTS</label>
+                      </th>
+                      <td>
+                        <textarea 
+                        name="comments" 
+                        id="comments" 
+                        placeholder="MESSAGE"
+                        cols="30" 
+                        rows="5"
+                        value={Val.comments}
+                        onChange={handleChange}
+                        ></textarea>
+                        <span className="err">{Err.comments}</span>
+                      </td>
+                    </tr>
+
+                    {/* btn set */}
+                    <tr>
+                      <th colSpan='2'>
+                        <input 
+                        type="reset" 
+                        value="CANCLE"
+                        onClick={handleReset}
+                        />
+                        <input 
+                        type="submit" 
+                        value="SEND"
+                        onClick={() => setSubmit(true)} 
+                        />
+                        </th>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+            </form>
+          </div>
+          <div className="contact-img">
+            <img src={process.env.PUBLIC_URL + '/img/contact.png'} alt="phonecall img" />
+          </div>
+        </div>
         <div id="map" ref={container}></div>
         <div className="btnSet">
           {/* 기존의 두개의 버튼에서 한개의 토글 버튼으로 바꿈.
@@ -141,7 +294,7 @@ export default function Contact() {
         </div>
       </div>
 
-
     </Layout>
   );
 }
+
