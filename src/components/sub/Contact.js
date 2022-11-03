@@ -78,7 +78,7 @@ export default function Contact() {
     const len = Object.keys(Err).length;
     if(len === 0 && Submit) {
       alert('전송 완료하였습니다. 메인페이지로 이동합니다.');
-      history.push('/youtube');
+      history.push('/');
     }
   }, [Err]);
 
@@ -199,15 +199,12 @@ export default function Contact() {
   return (
     <Layout name={'Contact'}>
       <div className="inner">
-        <h2>● CONTACT US<br/>수정 및 추가예정</h2>
+        <h2>● CONTACT US</h2>
         <div className="contact-section">
           <div className="contact-form">
-            {/* 순서5. 전송버튼 클릭시 핸들 서브밋 함수를 호출 */}
             <form onSubmit={handleSubmit}>
               <fieldset>
-                {/* <legend className='h'>폼 양식</legend> */}
                 <table>
-                  {/* <caption className='h'>정보입력</caption> */}
                   <tbody>
                     {/* email */}
                     <tr>
@@ -265,7 +262,7 @@ export default function Contact() {
             </form>
           </div>
           <div className="contact-img">
-            <img src={process.env.PUBLIC_URL + '/img/contact.png'} alt="phonecall img" />
+            <img src={process.env.PUBLIC_URL + '/img/contact.jpg'} alt="phonecall img" />
           </div>
         </div>
         <div id="map" ref={container}></div>
