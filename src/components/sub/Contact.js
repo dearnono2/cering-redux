@@ -209,7 +209,7 @@ export default function Contact() {
                     {/* email */}
                     <tr>
                       <th scope='row'>
-                        <label htmlFor="email">E-MAIL</label>
+                        <label htmlFor="email">◆ E-MAIL</label>
                       </th>
                       <td>
                         <input type="text"
@@ -225,7 +225,7 @@ export default function Contact() {
                     {/* comments */}
                     <tr>
                       <th scope='row'>
-                        <label htmlFor="comments">COMMENTS</label>
+                        <label htmlFor="comments">◆ COMMENTS</label>
                       </th>
                       <td>
                         <textarea 

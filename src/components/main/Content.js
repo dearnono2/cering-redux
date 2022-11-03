@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { useRef } from 'react';
 
 export default function Content() {
-  const circleText = useRef();
 
   return (
     <section>
