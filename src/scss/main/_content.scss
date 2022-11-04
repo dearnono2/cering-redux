@@ -73,6 +73,12 @@ section {
           height: 30px;
           font-size: 10px;
           border-radius: 14px;
+          transition: 0.5s;
+          cursor: pointer;
+          &:hover {
+            color: #fff;
+            background: #000;
+          }
         }
       }
     }
@@ -89,6 +95,8 @@ section {
       }
     }
   }
+
+  
 }
 
 
