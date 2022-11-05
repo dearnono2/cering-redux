@@ -5,7 +5,7 @@ export default function Visual() {
           {/* visual의 텍스트 부분 */}
           <div className="text-box">
             <div className="text-box-left">
-              <h2><p>●</p><p>BRAND<br/>RECOGNITION</p></h2>
+              <h2>●<p>BRAND RECOGNITION</p></h2>
               <div className="mini-text-box">
                 <p>Photography</p>
                 <p>See project</p>
