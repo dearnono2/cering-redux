@@ -221,6 +221,14 @@
 // mobile
 @media screen and (max-width: $mobile) {
   .About {
+    .sub-visual {
+      .inner {
+        h2 {
+          width: 100%;
+          font-size: 50px;
+        }
+      }
+    }
     #about {
       .inner {
         width: 100%;
@@ -253,9 +261,9 @@
       .simple-about-box {
         width: 100%; 
         gap: 15px;
-        justify-content: space-between;
+        justify-content: center;
         .simple-box {
-          width: 48%;
+          width: 80%;
 
         }
       }

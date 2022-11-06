@@ -1,7 +1,7 @@
 {
   "members": [
     {
-      "name": "Julia Bailey",
+      "name": "Sara Perez",
       "position": "President",
       "pic": "member1.jpg"
     },
@@ -11,22 +11,22 @@
       "pic": "member2.jpg"
     },
     {
-      "name": "Emily Miller",
+      "name": "Keisha Smith",
       "position": "UI Designer",
       "pic": "member3.jpg"
     },
     {
-      "name": "Paul Patel",
+      "name": "Paul Smith",
       "position": "Front-end Engineer",
       "pic": "member4.jpg"
     },
     {
-      "name": "Sara Perez",
+      "name": "Julia Bailey",
       "position": "Back-end Engineer",
       "pic": "member5.jpg"
     },
     {
-      "name": "Michael Sanchez",
+      "name": "Joe Tran",
       "position": "Project Manager",
       "pic": "member6.jpg"
     }
