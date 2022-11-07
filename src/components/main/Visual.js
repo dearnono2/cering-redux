@@ -8,7 +8,7 @@ export default function Visual() {
               <h2>●<p>BRAND RECOGNITION</p></h2>
               <div className="mini-text-box">
                 <p>Photography</p>
-                <p>See project</p>
+                <p>See project <span>→</span></p>
               </div>
             </div>
             <div className="text-box-right">

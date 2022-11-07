@@ -37,7 +37,7 @@ export default function Project() {
                   src={data.snippet.thumbnails.standard.url} 
                   alt={data.snippet.title} />
                 <div className="see-project">
-                  <p>See project</p>
+                  <p>See project <span>→</span></p>
                 </div>
               </div>
             </article>
