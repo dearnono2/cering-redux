@@ -221,3 +221,17 @@
     }
   }
 }
+
+
+// mobile
+@media screen and (max-width: $mobile) {
+  .Contact {
+    .inner {
+      .contact-section {
+        .contact-form {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

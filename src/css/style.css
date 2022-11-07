@@ -482,6 +482,9 @@ header .inner .fa-bars {
   #visual .inner .text-box .text-box-left .mini-text-box p:nth-of-type(2) {
     margin-top: 20px;
   }
+  #visual .inner .text-box .text-box-left .mini-text-box p:nth-of-type(2) span {
+    padding: 7px 10px;
+  }
 }
 #news {
   width: 100%;
@@ -707,11 +710,13 @@ section .inner .about-brands-logo .wrap-logo {
   section .inner .about-content .about-content-left {
     width: 100%;
     margin-bottom: 30px;
-    justify-content: space-between;
+    justify-content: center;
   }
   section .inner .about-content .about-content-left p {
     font-weight: bold;
+    margin-bottom: 20px;
     margin-right: 50px;
+    padding-left: 40px;
     font-size: 38px;
   }
   section .inner .about-content .about-content-left .circle-effect {
@@ -1713,6 +1718,11 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   }
   .Contact .inner .btnSet ul li:nth-of-type(1) {
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 539px) {
+  .Contact .inner .contact-section .contact-form {
+    width: 100%;
   }
 }
 .Project {
