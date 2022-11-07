@@ -17,6 +17,7 @@
         }
         .mini-text-box {
           display: flex;
+          flex-wrap: wrap;
           position: relative;
           margin: 30px 0;
           padding: 10px;
@@ -130,13 +131,14 @@
   }
 }
 
+// mobile
 @media screen and (max-width: $mobile) {
   #visual {
     .inner {
       .text-box {
         .text-box-left {
           h2 {
-            font-size: 40px;
+            font-size: 38px;
           }
           .mini-text-box {
             width: 100%;
@@ -146,11 +148,11 @@
                   width: 100px;
                 }
               }
+              &:nth-of-type(2) {
+                margin-top: 20px;
+              }
             }
           }
-        }
-        .text-box-right {
-
         }
       }
     }

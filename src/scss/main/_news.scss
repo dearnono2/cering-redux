@@ -71,6 +71,9 @@
 // mobile
 @media screen and (max-width: $mobile) {
   #news {
+    h2 {
+      font-size: 38px;
+    }
     article {
       width: 80%;
     }

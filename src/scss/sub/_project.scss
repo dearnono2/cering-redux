@@ -152,8 +152,14 @@
           width: 100%;
         }
         .pic {
-          height: 300px;
+          height: 340px;
           margin-bottom: 0;
+          .see-project {
+            width: 160px; height: 70px;
+            p {
+              font-size: 14px;
+            }
+          }
         }
       }
     }

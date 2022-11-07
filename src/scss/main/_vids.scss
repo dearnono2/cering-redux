@@ -96,3 +96,14 @@
 		}
 	}
 }
+
+
+// mobile 
+
+@media screen and (max-width: $mobile) {
+	#vids {
+		h3 {
+			font-size: 38px;
+		}
+	}
+}

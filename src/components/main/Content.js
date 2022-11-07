@@ -1,7 +1,15 @@
-import React, { useEffect } from "react"
-import { useRef } from 'react';
+// import React, { useEffect } from "react"
+import { useRef, useEffect } from 'react';
 
 export default function Content() {
+  const txt = useRef(null);
+
+  useEffect(() => {
+    txt.current.innerHTML = txt.current.innerText
+    .split('')
+    .map((letter, idx) => `<span style='transform:rotate(${idx * 8.2}deg)'>${letter}</span>`)
+    .join('');
+  }, [])
 
 
   return (
@@ -16,7 +24,7 @@ export default function Content() {
                 <img src="https://img.icons8.com/dotty/80/000000/compact-camera.png"/>
               </div>
               <div className="text">
-                <p>CERING ● CREATIVE AGENCY</p>
+                <p ref={txt}> ● CREATIVE AGENCY ● SIMPLE BUT EXPRESSIVE</p>
               </div>
             </div>
           </div>

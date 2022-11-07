@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 section {
   width: 100%; height: 100%;
   background: #efefef;
@@ -17,16 +19,13 @@ section {
       padding-bottom: 100px;
       .about-content-left {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         width: 50%;
         p {
           font-weight: bold;
           margin-right: 130px;
-          &:nth-of-type(1) {
-            font-size: 50px;
-          }
-          &:nth-of-type(2) {
-            font-size: 40px;
-          }
+          font-size: 50px;
         }
         // 되는지 안되는지 확인해보고 삭제하자. circle-effect
         .circle-effect {
@@ -46,16 +45,27 @@ section {
           }
           .text {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
+            animation: ani 15s linear infinite;
+            animation-play-state: running;
+            transition: 0.5s;
             p {
-              font-size: 24px;
+              
+              font-size: 18px;
+              // color: #A7774B;
+              color: #aaa;
             }
             span {
               position: absolute;
-              left: 50%;
+              left: 50%; top: -34%;
               transform-origin: 0 100px;
+              font-family: Inconsolata, sans-serif;
+
             }
+          }
+          &:hover .text {
+            animation: ani-reverse 15s linear infinite;
+
           }
         }
       }
@@ -95,8 +105,25 @@ section {
       }
     }
   }
-
   
+}
+
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes ani-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -114,12 +141,7 @@ section {
           p {
             font-weight: bold;
             margin-right: 50px;
-            &:nth-of-type(1) {
-              font-size: 50px;
-            }
-            &:nth-of-type(2) {
-              font-size: 40px;
-            }
+            font-size: 50px;
           }
         }
         .about-content-right {
@@ -151,11 +173,23 @@ section {
           p {
             font-weight: bold;
             margin-right: 50px;
-            &:nth-of-type(1) {
-              font-size: 50px;
+            font-size: 38px;
+          }
+          .circle-effect {
+            width: 100px; height: 100px;
+            margin: 0 20px;
+            margin-top: 42px;
+            .img {
+              width: 60px; height: 60px;
+              img {
+                width: 100%; height: 100%;
+              }
             }
-            &:nth-of-type(2) {
-              font-size: 40px;
+            .text {
+              span {
+                left: 40%; top: -36%;
+                transform-origin: 10px 84px;
+              }
             }
           }
 
