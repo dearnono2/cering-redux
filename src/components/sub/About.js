@@ -1,10 +1,14 @@
 import Layout from "../common/Layout";
 import { useSelector } from "react-redux";
+
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
 import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function About() {
+
+
+
   const path = process.env.PUBLIC_URL;
 
   const Members = useSelector((store) => store.memberReducer.members)
