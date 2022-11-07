@@ -19,16 +19,42 @@ header {
 			bottom: 0px;
 			right: 0px;
 			li {
+        position: relative;
 				float: left;
-				transition: 0.3s;
+				transition: 0.5s;
 				a {
 					display: inline-block;
 					padding: 30px 30px;
 					font: bold 14px/1 'arial';
 					color: #000;
 				}
-				&:hover {
-					transform: scale(1.2) rotate(10deg);
+
+        &::before {
+          position: absolute;
+          top: 50%; left: 10px;
+          transform: translateY(-65%);
+          content: '(';
+          font-size: 12px;
+          display: none;
+        }
+        &::after {
+          position: absolute;
+          top: 50%; right: 10px;
+          transform: translateY(-65%);
+          content: ')';
+          font-size: 12px;
+          display: none;
+        }
+
+        &:hover{
+					// transform: scale(1.2) rotate(10deg);
+          transition: 0.5s;
+          &::before {
+            display: inline;
+          }
+          &::after {
+            display: inline;
+          }
 				}
 			}
 		}
