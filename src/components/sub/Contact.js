@@ -101,13 +101,13 @@ export default function Contact() {
       imgSize: new kakao.maps.Size(232, 99),
       imgPos: { offset: new kakao.maps.Point(116, 99) }
     },
-    {
-      title: '올림픽 공원',
-      latlng: new kakao.maps.LatLng(37.5206868, 127.1214941),
-      imgUrl: `${process.env.PUBLIC_URL}/img/marker2.png`,
-      imgSize: new kakao.maps.Size(232, 99),
-      imgPos: { offset: new kakao.maps.Point(116, 99) }
-    },
+    // {
+    //   title: '올림픽 공원',
+    //   latlng: new kakao.maps.LatLng(37.5206868, 127.1214941),
+    //   imgUrl: `${process.env.PUBLIC_URL}/img/marker2.png`,
+    //   imgSize: new kakao.maps.Size(232, 99),
+    //   imgPos: { offset: new kakao.maps.Point(116, 99) }
+    // },
     {
       title: '서울 시청',
       latlng: new kakao.maps.LatLng(37.5657037, 126.9768616),
@@ -200,6 +200,7 @@ export default function Contact() {
     <Layout name={'Contact'}>
       <div className="inner">
         <h2>● CONTACT US</h2>
+        {/* form and img section */}
         <div className="contact-section">
           <div className="contact-form">
             <form onSubmit={handleSubmit}>
@@ -265,6 +266,13 @@ export default function Contact() {
             <img src={process.env.PUBLIC_URL + '/img/contact.jpg'} alt="phonecall img" />
           </div>
         </div>
+        {/* contact guide */}
+        <div className="guide-section">
+          <h3>LET'S WORK TOGETHER! <br />수정예정</h3>
+          <h3>+82-12-1234-5678</h3>
+          <h3>INFO@CERING.COM</h3>
+        </div>
+        {/* map section */}
         <div id="map" ref={container}></div>
         <div className="btnSet">
           {/* 기존의 두개의 버튼에서 한개의 토글 버튼으로 바꿈.

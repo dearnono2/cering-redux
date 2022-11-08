@@ -14,7 +14,15 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <div class="defaults"></div>
-  <div class="mask">LOADING...</div>
+  <!-- <div class="mask">LOADING...</div> -->
+  <div class="mask">
+    <p id="loading-txt">CERING</p>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  
+
 
   <style>
     .defaults {
@@ -42,6 +50,41 @@
     .mask.off {
       opacity: 0;
     }
+
+    #loading-txt {
+      position: absolute;
+      top: 46%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    .circle {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      filter: saturate(5);
+      opacity: 0.1;
+    }
+
+    .circle:nth-of-type(1) {
+      background: hotpink;
+      top: 43%; left: 50%;
+    }
+
+    .circle:nth-of-type(2) {
+      background: springgreen;
+      top: 50%; left: 52%;
+    }
+
+    .circle:nth-of-type(3) {
+      background: royalblue;
+      top: 50%; left: 48%;
+    }
+
   </style>
 
   <script>
@@ -96,7 +139,6 @@
         vidDOM.forEach(vid => {
           vid.onloadeddata = () => {
             countVid++;
-            //console.log('vid loaded', countVid);
             if (countVid === vids.length) res(true);
           }
         })
