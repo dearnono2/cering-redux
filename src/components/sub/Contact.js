@@ -89,31 +89,24 @@ export default function Contact() {
   //
 
   const { kakao } = window;
-  // 윈도우 객체에 등록되어 있는 카카오키를 변수명으로 비구조화할당을 한것.
   // 윈도우 객체가 카카오 객체를 사용할 수 있도록 하는 코드.
   // const kakao = (window).kakao;
 
   const info = [
     {
-      title: '삼성동 코엑스',
-      latlng: new kakao.maps.LatLng(33.450701, 126.570667),
-      imgUrl: `${process.env.PUBLIC_URL}/img/marker1.png`,
-      imgSize: new kakao.maps.Size(232, 99),
-      imgPos: { offset: new kakao.maps.Point(116, 99) }
+      title: 'COEX',
+      latlng: new kakao.maps.LatLng(37.5116828, 127.059151),
+      imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
+      imgSize: new kakao.maps.Size(64, 65),
+      imgPos: { offset: new kakao.maps.Point(32, 65) }
+      // offset 이미지 위치 = 이미지 원사이즈 값의 반, 이미지 원사이즈 값
     },
-    // {
-    //   title: '올림픽 공원',
-    //   latlng: new kakao.maps.LatLng(37.5206868, 127.1214941),
-    //   imgUrl: `${process.env.PUBLIC_URL}/img/marker2.png`,
-    //   imgSize: new kakao.maps.Size(232, 99),
-    //   imgPos: { offset: new kakao.maps.Point(116, 99) }
-    // },
     {
-      title: '서울 시청',
-      latlng: new kakao.maps.LatLng(37.5657037, 126.9768616),
-      imgUrl: `${process.env.PUBLIC_URL}/img/marker3.png`,
-      imgSize: new kakao.maps.Size(232, 99),
-      imgPos: { offset: new kakao.maps.Point(116, 99) }
+      title: 'SINSA',
+      latlng: new kakao.maps.LatLng(37.5161251, 127.0213834),
+      imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
+      imgSize: new kakao.maps.Size(64, 65),
+      imgPos: { offset: new kakao.maps.Point(32, 99) }
     },
   ];
 
@@ -216,7 +209,7 @@ export default function Contact() {
                         <input type="text"
                                 id='email'
                                 name='email'
-                                placeholder='EMAIL ADDDRESS*'
+                                placeholder='EMAIL ADDRESS*'
                                 value={Val.email}
                                 onChange={handleChange}
                         />
@@ -268,11 +261,17 @@ export default function Contact() {
         </div>
         {/* contact guide */}
         <div className="guide-section">
-          <h3>LET'S WORK TOGETHER! <br />수정예정</h3>
-          <h3>+82-12-1234-5678</h3>
-          <h3>INFO@CERING.COM</h3>
+          <div className="guide-section-left">
+            <h3>● NEW BUSINESS & GENERAL</h3>
+            <h3><a href="#">+82-12-1234-5678</a></h3>
+            <h3><a href="#">INFO@CERING.COM</a></h3>
+          </div>
+          <div className="guide-section-right">
+            <h3>◀ GET IN TOUCH!</h3>
+          </div>
         </div>
         {/* map section */}
+        <h2 className="map-h2">● LOCATION</h2>
         <div id="map" ref={container}></div>
         <div className="btnSet">
           {/* 기존의 두개의 버튼에서 한개의 토글 버튼으로 바꿈.
