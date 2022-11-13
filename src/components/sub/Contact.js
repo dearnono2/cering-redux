@@ -262,9 +262,9 @@ export default function Contact() {
         {/* contact guide */}
         <div className="guide-section">
           <div className="guide-section-left">
-            <h3>● NEW BUSINESS & GENERAL</h3>
-            <h3><a href="#">+82-12-1234-5678</a></h3>
-            <h3><a href="#">INFO@CERING.COM</a></h3>
+            <p>● NEW BUSINESS & GENERAL</p>
+            <p><a href="#">+82-12-1234-5678</a></p>
+            <p><a href="#">INFO@CERING.COM</a></p>
           </div>
           <div className="guide-section-right">
             <h3>◀ GET IN TOUCH!</h3>

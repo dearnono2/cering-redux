@@ -120,12 +120,13 @@
       background: #ddd;
       .guide-section-left {
         width: 50%;
-        h3 {
+        p {
           position: relative;
           text-align: center;
           font-size: 16px;
           margin-top: 20px;
           padding-bottom: 10px;
+          font-weight: 600;
           overflow: hidden;
           &:nth-of-type(1) {
             font-size: 28px;
@@ -279,8 +280,7 @@
         }
       }
       .guide-section {
-        .guide-section-left {
-        }
+        
         .guide-section-right {
           right: 20px;
           width: 33%;
