@@ -46,7 +46,7 @@ section {
           .text {
             position: absolute;
             width: 100%; height: 100%;
-            animation: ani 15s linear infinite;
+            animation: anime 15s linear infinite;
             animation-play-state: running;
             transition: 0.5s;
             p {
@@ -108,7 +108,7 @@ section {
   
 }
 
-@keyframes ani {
+@keyframes anime {
   0% {
     transform: rotate(0deg);
   }
