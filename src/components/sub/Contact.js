@@ -259,43 +259,70 @@ export default function Contact() {
             <img src={process.env.PUBLIC_URL + '/img/contact.jpg'} alt="phonecall img" />
           </div>
         </div>
-        {/* contact guide */}
-        <div className="guide-section">
-          <div className="guide-section-left">
-            <p>● NEW BUSINESS & GENERAL</p>
-            <p><a href="#">+82-12-1234-5678</a></p>
-            <p><a href="#">INFO@CERING.COM</a></p>
-          </div>
-          <div className="guide-section-right">
-            <h3>◀ GET IN TOUCH!</h3>
+        <div className="flow-section">
+          <div className="flow-imgs">
+            <div className="flow-img">flow 요소 추가할 예정</div>
           </div>
         </div>
         {/* map section */}
         <h2 className="map-h2">● LOCATION</h2>
-        <div id="map" ref={container}></div>
-        <div className="btnSet">
-          {/* 기존의 두개의 버튼에서 한개의 토글 버튼으로 바꿈.
-              버튼 클릭시 트래픽 값을 반전처리 => !Traffic
-          */}
-          <button onClick={() => { setTraffic(!Traffic) }
-          }>
-            {/* Traffic의 값에 따라서 버튼의 내용도 변경 */}
-          { Traffic ? 'Traffic OFF' : 'Traffic ON'}
-          </button>
+        <div className="map-section">
+          {/* left - kakao map */}
+          <div className="kakao-map">
+            <div id="map" ref={container}></div>
+            <div className="btnSet">
+              {/* 기존의 두개의 버튼에서 한개의 토글 버튼으로 바꿈.
+                  버튼 클릭시 트래픽 값을 반전처리 => !Traffic
+              */}
+              <button onClick={() => { setTraffic(!Traffic) }
+              }>
+                {/* Traffic의 값에 따라서 버튼의 내용도 변경 */}
+              { Traffic ? 'Traffic OFF' : 'Traffic ON'}
+              </button>
 
-          <ul className="branch" ref={btns}>
-            {/* 각 버튼을 클릭할 때마다 Index의 값을 변경 */}
-            {
-              Info.map((el, idx) => {
-                return(
-                  <li key={idx} onClick={() => setIndex(idx)}>
-                    {el.title}
-                  </li>
-                );
-              })
-            }
-          </ul>
+              <ul className="branch" ref={btns}>
+                {/* 각 버튼을 클릭할 때마다 Index의 값을 변경 */}
+                {
+                  Info.map((el, idx) => {
+                    return(
+                      <li key={idx} onClick={() => setIndex(idx)}>
+                        {el.title}
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+            </div>
+          </div>
+          {/* right - location guide text */}
+          <div className="location-guide">
+            <div className="location-guide-address">
+              <h3>ADDRESS</h3>
+              <h4>HEAD OFFICE / SINSA</h4>
+              <p>
+                8 Dosan-daero 6-gil, Gangnam-gu, Seoul, Republic of Korea
+              </p>
+              <h4>BRANCH OFFICE / COEX SAMSUNG</h4>
+              <p>
+                513, Yeongdong-daero, Gangnam-gu, Seoul, Republic of Korea
+              </p>
+            </div>
+            <div className="location-guide-information">
+            {/* contact guide */}
+              <div className="guide-section">
+                <div className="guide-section-left">
+                  <p>NEW BUSINESS & GENERAL</p>
+                  <p><a href="#">+82-12-1234-5678</a></p>
+                  <p><a href="#">INFO@CERING.COM</a></p>
+                </div>
+                <div className="guide-section-right">
+                  <h3>◀ GET IN TOUCH!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
 
     </Layout>

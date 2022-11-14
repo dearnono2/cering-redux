@@ -616,7 +616,7 @@ section .inner .about-content .about-content-left .circle-effect .text {
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: ani 15s linear infinite;
+  animation: anime 15s linear infinite;
   animation-play-state: running;
   transition: 0.5s;
 }
@@ -668,7 +668,7 @@ section .inner .about-brands-logo .wrap-logo {
   width: 20%;
 }
 
-@keyframes ani {
+@keyframes anime {
   0% {
     transform: rotate(0deg);
   }
@@ -827,6 +827,7 @@ section .inner .about-brands-logo .wrap-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s;
 }
 #vids .swiper .swiper-slide .inner .pic .font-awesome {
   position: absolute;
@@ -837,6 +838,9 @@ section .inner .about-brands-logo .wrap-logo {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: 0.5s;
+}
+#vids .swiper .swiper-slide .inner .pic:hover img {
+  transform: scale(1.1);
 }
 #vids .swiper .swiper-slide .inner .pic:hover .font-awesome {
   opacity: 1;
@@ -1631,28 +1635,42 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   width: 100%;
   height: 100%;
 }
-.Contact .inner #map {
+.Contact .inner .flow-section {
+  background: #ddd;
+  width: 100%;
+}
+.Contact .inner .map-h2 {
+  margin: 50px 0 30px;
+}
+.Contact .inner .map-section {
+  display: flex;
+  gap: 30px;
+}
+.Contact .inner .map-section .kakao-map {
+  width: 50%;
+}
+.Contact .inner .map-section .kakao-map #map {
   width: 100%;
   height: 500px;
   background: #000;
 }
-.Contact .inner .btnSet {
+.Contact .inner .map-section .kakao-map .btnSet {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-between;
   margin: 50px 0;
 }
-.Contact .inner .btnSet button {
+.Contact .inner .map-section .kakao-map .btnSet button {
   cursor: pointer;
   height: 30px;
   border: 1px solid #888;
   padding: 5px 20px;
 }
-.Contact .inner .btnSet ul {
+.Contact .inner .map-section .kakao-map .btnSet ul {
   display: flex;
 }
-.Contact .inner .btnSet ul li {
+.Contact .inner .map-section .kakao-map .btnSet ul li {
   border: 1px solid #888;
   height: 30px;
   padding: 0 20px;
@@ -1662,12 +1680,87 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   margin-left: 10px;
   transition: 0.5s;
 }
-.Contact .inner .btnSet ul li.on {
+.Contact .inner .map-section .kakao-map .btnSet ul li.on {
   background: #333;
   border: 1px solid #333;
   color: #fff;
 }
+.Contact .inner .map-section .location-guide {
+  width: 50%;
+  padding: 30px;
+}
+.Contact .inner .map-section .location-guide .location-guide-address {
+  margin-bottom: 50px;
+}
+.Contact .inner .map-section .location-guide .location-guide-address h3 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.Contact .inner .map-section .location-guide .location-guide-address h4:nth-of-type(2) {
+  margin-top: 20px;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  gap: 8%;
+  padding: 10px 0 20px;
+  background: #ddd;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-left {
+  width: 50%;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-left p {
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-left p:nth-of-type(1) {
+  font-size: 28px;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-left p::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: #000;
+  bottom: -8px;
+  transition: 0.3s;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-left p:hover::after {
+  bottom: 0;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-left p a {
+  color: #000;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-right {
+  width: 40%;
+  height: 140px;
+  margin-top: 40px;
+  background: #fff;
+}
+.Contact .inner .map-section .location-guide .location-guide-information .guide-section .guide-section-right h3 {
+  margin: 20px;
+  animation: ani 0.5s linear infinite;
+}
 
+@keyframes ani {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @media screen and (max-width: 1179px) {
   .Contact .inner h2 {
     margin-left: 40px;
@@ -1713,6 +1806,10 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   .Contact .inner .contact-section .contact-img {
     width: 90%;
   }
+  .Contact .inner .guide-section .guide-section-right {
+    right: 20px;
+    width: 33%;
+  }
   .Contact .inner .btnSet button {
     margin-bottom: 20px;
   }
@@ -1721,8 +1818,31 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   }
 }
 @media screen and (max-width: 539px) {
+  .Contact .inner .contact-section {
+    margin-bottom: 10px;
+  }
   .Contact .inner .contact-section .contact-form {
     width: 100%;
+    order: 2;
+  }
+  .Contact .inner .contact-section .contact-form form fieldset table tr:nth-of-type(1) {
+    margin-bottom: 30px;
+  }
+  .Contact .inner .contact-section .contact-img {
+    order: 1;
+    margin-bottom: 50px;
+  }
+  .Contact .inner .guide-section .guide-section-left h3 {
+    font-size: 14px;
+  }
+  .Contact .inner .guide-section .guide-section-left h3:nth-of-type(1) {
+    font-size: 20px;
+  }
+  .Contact .inner .guide-section .guide-section-right {
+    width: 40%;
+  }
+  .Contact .inner .guide-section .guide-section-right h3 {
+    font-size: 14px;
   }
 }
 .Project {
@@ -1748,7 +1868,7 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   right: 10px;
   transform: translateY(-50%);
   width: 300px;
-  padding: 20px;
+  padding: 30px 20px;
   font-weight: bold;
   font-size: 30px;
   background: #000;
@@ -1787,7 +1907,8 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   object-fit: cover;
 }
 .Project .inner article .pic:hover {
-  filter: saturate(1.8);
+  filter: saturate(1.5);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.8);
 }
 .Project .inner article .pic .see-project {
   display: flex;
@@ -1854,7 +1975,7 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
 }
 @media screen and (max-width: 539px) {
   .Project .inner article {
-    height: 400px;
+    height: 340px;
   }
   .Project .inner article h3 {
     width: 100%;
@@ -1865,7 +1986,8 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
     width: 100%;
   }
   .Project .inner article .pic {
-    height: 340px;
+    width: 100%;
+    height: 280px;
     margin-bottom: 0;
   }
   .Project .inner article .pic .see-project {
@@ -1874,6 +1996,15 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   }
   .Project .inner article .pic .see-project p {
     font-size: 14px;
+  }
+  .Project .inner article::after {
+    position: absolute;
+    bottom: -80px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #aaa;
   }
 }
 
