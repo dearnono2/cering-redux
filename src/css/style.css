@@ -308,6 +308,24 @@ header .inner .fa-bars {
 #mobileMenu h1 a {
   color: #bbb;
 }
+#mobileMenu ul li::after {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #bbb;
+  transition: 0.5s;
+}
+#mobileMenu ul li:hover::after {
+  width: 100%;
+}
+#mobileMenu ul li:hover a {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.8);
+  color: azure;
+}
+#mobileMenu ul li:last-of-type::after {
+  display: none;
+}
 #mobileMenu ul li a {
   display: block;
   height: 50px;
@@ -318,14 +336,15 @@ header .inner .fa-bars {
 @media screen and (max-width: 539px) {
   #mobileMenu {
     width: 100%;
-    height: 380px;
+    height: 400px;
     text-align: center;
   }
   #mobileMenu ul li:last-child {
     position: relative;
     width: 30px;
     height: 30px;
-    margin: 10px auto;
+    margin: 20px auto;
+    cursor: pointer;
   }
   #mobileMenu ul li:last-child::before {
     position: absolute;
@@ -351,9 +370,11 @@ header .inner .fa-bars {
   }
   #mobileMenu ul li:last-child:hover::before {
     transform: rotate(-45deg);
+    background: azure;
   }
   #mobileMenu ul li:last-child:hover::after {
     transform: rotate(45deg);
+    background: azure;
   }
 }
 #visual .inner {
