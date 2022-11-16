@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cering-redux/static/css/main.8cebd1f3.css",
-    "main.js": "/cering-redux/static/js/main.7e353583.js",
+    "main.css": "/cering-redux/static/css/main.09518e6a.css",
+    "main.js": "/cering-redux/static/js/main.5867dc8c.js",
     "index.html": "/cering-redux/index.html",
-    "main.8cebd1f3.css.map": "/cering-redux/static/css/main.8cebd1f3.css.map",
-    "main.7e353583.js.map": "/cering-redux/static/js/main.7e353583.js.map"
+    "main.09518e6a.css.map": "/cering-redux/static/css/main.09518e6a.css.map",
+    "main.5867dc8c.js.map": "/cering-redux/static/js/main.5867dc8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cebd1f3.css",
-    "static/js/main.7e353583.js"
+    "static/css/main.09518e6a.css",
+    "static/js/main.5867dc8c.js"
   ]
 }
