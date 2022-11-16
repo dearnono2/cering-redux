@@ -113,8 +113,17 @@
     .flow-section {
       background: #ddd;
       width: 100%;
-      .flow-img {
-
+      .flow-brands-logo {
+        display: flex;
+        width: 100%;
+        margin: 100px 0;
+        padding: 30px 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+        .wrap-logo {
+          width: 20%;
+        }
       }
     }
     // map section
@@ -185,55 +194,53 @@
         // 가게 이메일, 연락처 부분
         .location-guide-information {
           // guide section
-          .guide-section {
-            display: flex;
-            flex-wrap: wrap;
-            position: relative;
-            width: 100%;
-            gap: 8%;
-            padding: 10px 0 20px;
-            background: #ddd;
-            .guide-section-left {
-              width: 50%;
-              p {
-                position: relative;
-                text-align: center;
-                font-size: 16px;
-                margin-top: 20px;
-                padding-bottom: 10px;
-                font-weight: 600;
-                overflow: hidden;
-                &:nth-of-type(1) {
-                  font-size: 28px;
-                }
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          width: 100%;
+          gap: 8%;
+          padding: 10px 0 20px;
+          background: #ddd;
+          .guide-information-left {
+            width: 50%;
+            p {
+              position: relative;
+              text-align: center;
+              font-size: 16px;
+              margin-top: 20px;
+              padding-bottom: 10px;
+              font-weight: 600;
+              overflow: hidden;
+              &:nth-of-type(1) {
+                font-size: 28px;
+              }
+              &::after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%; height: 10px;
+                background: #000;
+                bottom: -8px;
+                transition: 0.3s;
+              }
+              &:hover {
                 &::after {
-                  position: absolute;
-                  display: block;
-                  content: '';
-                  width: 100%; height: 10px;
-                  background: #000;
-                  bottom: -8px;
-                  transition: 0.3s;
+                  bottom: 0;
                 }
-                &:hover {
-                  &::after {
-                    bottom: 0;
-                  }
-                }
+              }
 
-                a {
-                  color: #000;
-                }
+              a {
+                color: #000;
               }
             }
-            .guide-section-right {
-              width: 40%; height: 140px;
-              margin-top: 40px;
-              background: #fff;
-              h3 {
-                margin: 20px;
-                animation: ani 0.5s linear infinite;
-              }
+          }
+          .guide-information-right {
+            width: 40%; height: 140px;
+            margin-top: 40px;
+            background: #fff;
+            h3 {
+              margin: 20px;
+              animation: ani 0.5s linear infinite;
             }
           }
         }
@@ -313,21 +320,40 @@
           width: 90%;
         }
       }
-      .guide-section {
-        
-        .guide-section-right {
-          right: 20px;
-          width: 33%;
+      .flow-section {
+        .flow-brands-logo {
+          .wrap-logo {
+            img {
+              width: 80px; height: 80px;
+            }
+          }
         }
       }
-      .btnSet {
-        button {
-          margin-bottom: 20px;
-        }
-        ul {
-          li:nth-of-type(1) {
-            margin-left: 0;
+      .map-section {
+        flex-wrap: wrap;
+        .kakao-map {
+          &::after {
+            display: block;
+            content: '';
+            width: 100%; height: 2px;
+            background-color: #000;
           }
+          width: 100%;
+          .btnSet {
+            button {
+              margin-bottom: 20px;
+            }
+            ul {
+              li:nth-of-type(1) {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+        .location-guide {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
         }
       }
     }
@@ -361,19 +387,28 @@
           margin-bottom: 50px;
         }
       }
-      .guide-section {
-        .guide-section-left {
-          h3 {
-            font-size: 14px;
-            &:nth-of-type(1) {
-              font-size: 20px;
-            }
+      .flow-section {
+        .flow-brands-logo {
+          .wrap-logo {
+            width: 50%;
           }
         }
-        .guide-section-right {
-          width: 40%;
-          h3 {
-            font-size: 14px;
+      }
+      .map-section {
+        .location-guide {
+          .location-guide-address {
+            h3 {
+              text-align: center;
+            }
+          }
+          .location-guide-information {
+            padding-bottom: 40px;
+            .guide-information-left {
+              width: 100%;
+            }
+            .guide-information-right {
+              display: none;
+            }
           }
         }
       }

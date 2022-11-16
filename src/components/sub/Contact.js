@@ -260,8 +260,22 @@ export default function Contact() {
           </div>
         </div>
         <div className="flow-section">
-          <div className="flow-imgs">
-            <div className="flow-img">flow 요소 추가할 예정</div>
+          <div className="flow-brands-logo">
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/windows/100/000000/wix.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/dotty/100/000000/yolo.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/windows/100/000000/ember.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/ios/100/000000/audible.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/ios-filled/100/000000/the-beatles.png"/>
+            </div>
           </div>
         </div>
         {/* map section */}
@@ -309,15 +323,13 @@ export default function Contact() {
             </div>
             <div className="location-guide-information">
             {/* contact guide */}
-              <div className="guide-section">
-                <div className="guide-section-left">
-                  <p>NEW BUSINESS & GENERAL</p>
-                  <p><a href="#">+82-12-1234-5678</a></p>
-                  <p><a href="#">INFO@CERING.COM</a></p>
-                </div>
-                <div className="guide-section-right">
-                  <h3>◀ GET IN TOUCH!</h3>
-                </div>
+              <div className="guide-information-left">
+                <p>NEW BUSINESS & GENERAL</p>
+                <p><a href="#">+82-12-1234-5678</a></p>
+                <p><a href="#">INFO@CERING.COM</a></p>
+              </div>
+              <div className="guide-information-right">
+                <h3>◀ GET IN TOUCH!</h3>
               </div>
             </div>
           </div>
