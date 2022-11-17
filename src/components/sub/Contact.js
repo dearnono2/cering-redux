@@ -260,7 +260,24 @@ export default function Contact() {
           </div>
         </div>
         <div className="flow-section">
-          <div className="flow-brands-logo">
+          <div className="flow-brands-logos">
+            {/* first */}
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/windows/100/000000/wix.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/dotty/100/000000/yolo.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/windows/100/000000/ember.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/ios/100/000000/audible.png"/>
+            </div>
+            <div className="wrap-logo">
+              <img src="https://img.icons8.com/ios-filled/100/000000/the-beatles.png"/>
+            </div>
+            {/* second */}
             <div className="wrap-logo">
               <img src="https://img.icons8.com/windows/100/000000/wix.png"/>
             </div>

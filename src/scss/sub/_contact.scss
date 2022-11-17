@@ -113,16 +113,20 @@
     .flow-section {
       background: #ddd;
       width: 100%;
-      .flow-brands-logo {
+      margin: 100px 0;
+      padding: 30px 0;
+      overflow: hidden;
+      .flow-brands-logos {
         display: flex;
-        width: 100%;
-        margin: 100px 0;
-        padding: 30px 0;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: center;
+        width: 200%;
+
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        // text-align: center;
+        
         .wrap-logo {
           width: 20%;
+          animation: marquee 12s linear infinite;
         }
       }
     }
@@ -249,6 +253,12 @@
   }
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-500%); }
+}
+
+
 @keyframes ani {
   0% {
     transform: translateX(0);
@@ -321,7 +331,8 @@
         }
       }
       .flow-section {
-        .flow-brands-logo {
+        .flow-brands-logos {
+          width: 302%;
           .wrap-logo {
             img {
               width: 80px; height: 80px;
@@ -388,10 +399,8 @@
         }
       }
       .flow-section {
-        .flow-brands-logo {
-          .wrap-logo {
-            width: 50%;
-          }
+        .flow-brands-logos {
+          width: 500%;
         }
       }
       .map-section {
