@@ -163,11 +163,12 @@ section {
           margin-bottom: 30px;
           justify-content: center;
           p {
+            width: 100%;
+            text-align: center;
             font-weight: bold;
-            margin-bottom: 20px;
-            margin-right: 50px;
-            padding-left: 40px;
-            font-size: 38px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            font-size: 42px;
           }
           .circle-effect {
             width: 100px; height: 100px;
@@ -190,9 +191,13 @@ section {
         }
         .about-content-right {
           width: 100%;
+          display: flex;
+          flex-wrap: wrap;
           justify-content: center;
-          padding: 60px;
-
+          padding: 60px 30px;
+          button {
+            margin: 0 auto;
+          }
         }
       }
       .about-brands-logo {

@@ -239,6 +239,13 @@ header .inner .fa-bars {
   right: 40px;
   display: none;
 }
+header.main {
+  background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
 
 @media screen and (max-width: 1179px) {
   header {
@@ -379,7 +386,7 @@ header .inner .fa-bars {
 }
 #visual .inner {
   width: 1180px;
-  padding-top: 120px;
+  padding-top: 150px;
   margin: 0 auto;
 }
 #visual .inner .text-box {
@@ -465,7 +472,7 @@ header .inner .fa-bars {
 @media screen and (max-width: 1179px) {
   #visual .inner {
     width: 100%;
-    padding: 20px;
+    padding: 120px 20px;
   }
   #visual .inner .text-box {
     width: 100%;
@@ -734,11 +741,12 @@ section .inner .about-brands-logo .wrap-logo {
     justify-content: center;
   }
   section .inner .about-content .about-content-left p {
+    width: 100%;
+    text-align: center;
     font-weight: bold;
-    margin-bottom: 20px;
-    margin-right: 50px;
-    padding-left: 40px;
-    font-size: 38px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    font-size: 42px;
   }
   section .inner .about-content .about-content-left .circle-effect {
     width: 100px;
@@ -997,6 +1005,11 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   border: #fff;
 }
 
+@media screen and (max-width: 1179px) {
+  .scroll_navi {
+    right: 23px;
+  }
+}
 .Community > .inner .inputBox {
   width: 100%;
   border: 1px solid #bbb;

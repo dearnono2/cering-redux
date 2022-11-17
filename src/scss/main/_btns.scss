@@ -19,3 +19,9 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .scroll_navi {
+    right: 23px;
+  }
+}
