@@ -93,6 +93,9 @@ footer .inner .footer-box:nth-of-type(4) ul li {
 footer .inner .footer-box:nth-of-type(4) ul li a {
   color: #ddd;
 }
+footer .inner .footer-box:nth-of-type(4) ul li a:hover {
+  color: azure;
+}
 
 @media screen and (max-width: 1179px) {
   footer .inner {
@@ -386,7 +389,7 @@ header.main {
 }
 #visual .inner {
   width: 1180px;
-  padding-top: 150px;
+  padding-top: 180px;
   margin: 0 auto;
 }
 #visual .inner .text-box {
@@ -769,8 +772,13 @@ section .inner .about-brands-logo .wrap-logo {
   }
   section .inner .about-content .about-content-right {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 60px;
+    padding: 60px 30px;
+  }
+  section .inner .about-content .about-content-right button {
+    margin: 0 auto;
   }
   section .inner .about-brands-logo .wrap-logo {
     width: 50%;
@@ -1644,6 +1652,7 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   padding: 10px;
   border: 0;
   border-bottom: 1px solid #000;
+  font-family: arial;
 }
 .Contact .inner .contact-section .contact-form form fieldset table tr:nth-of-type(3) {
   padding: 30px;
@@ -1672,18 +1681,17 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
 .Contact .inner .flow-section {
   background: #ddd;
   width: 100%;
-}
-.Contact .inner .flow-section .flow-brands-logo {
-  display: flex;
-  width: 100%;
   margin: 100px 0;
   padding: 30px 0;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: center;
+  overflow: hidden;
 }
-.Contact .inner .flow-section .flow-brands-logo .wrap-logo {
+.Contact .inner .flow-section .flow-brands-logos {
+  display: flex;
+  width: 200%;
+}
+.Contact .inner .flow-section .flow-brands-logos .wrap-logo {
   width: 20%;
+  animation: marquee 12s linear infinite;
 }
 .Contact .inner .map-h2 {
   margin: 50px 0 30px;
@@ -1745,6 +1753,12 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
 .Contact .inner .map-section .location-guide .location-guide-address h4:nth-of-type(2) {
   margin-top: 20px;
 }
+.Contact .inner .map-section .location-guide .location-guide-address p {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 12px;
+  background: #fff;
+}
 .Contact .inner .map-section .location-guide .location-guide-information {
   display: flex;
   flex-wrap: wrap;
@@ -1796,6 +1810,14 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   animation: ani 0.5s linear infinite;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500%);
+  }
+}
 @keyframes ani {
   0% {
     transform: translateX(0);
@@ -1852,7 +1874,10 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
   .Contact .inner .contact-section .contact-img {
     width: 90%;
   }
-  .Contact .inner .flow-section .flow-brands-logo .wrap-logo img {
+  .Contact .inner .flow-section .flow-brands-logos {
+    width: 302%;
+  }
+  .Contact .inner .flow-section .flow-brands-logos .wrap-logo img {
     width: 80px;
     height: 80px;
   }
@@ -1896,8 +1921,8 @@ section .inner .service-container .icon-box p:nth-of-type(2) {
     order: 1;
     margin-bottom: 50px;
   }
-  .Contact .inner .flow-section .flow-brands-logo .wrap-logo {
-    width: 50%;
+  .Contact .inner .flow-section .flow-brands-logos {
+    width: 500%;
   }
   .Contact .inner .map-section .location-guide .location-guide-address h3 {
     text-align: center;

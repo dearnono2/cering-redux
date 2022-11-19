@@ -51,6 +51,9 @@ footer {
             margin: 3px 0;
             a {
               color: #ddd;
+              &:hover {
+                color: azure;
+              }
             }
           }
         }

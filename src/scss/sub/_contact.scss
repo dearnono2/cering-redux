@@ -62,7 +62,6 @@
                 &:nth-of-type(2) {
                   padding-top: 50px;
                   height: 100px;
-                  // background: yellow;
                   th {
                     text-align: start;
                   }
@@ -73,6 +72,7 @@
                       padding: 10px;
                       border: 0;
                       border-bottom: 1px solid #000;
+                      font-family: arial;
                     }
                   }
                 }
@@ -193,6 +193,12 @@
             &:nth-of-type(2) {
               margin-top: 20px;
             }
+          }
+          p {
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 12px;
+            background: #fff;
           }
         }
         // 가게 이메일, 연락처 부분
