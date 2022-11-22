@@ -92,13 +92,16 @@
     const defaults = document.querySelector('.defaults');
     const mask = document.querySelector('.mask');
     let tags = '';
-    const baseURL = 'https://dcodelabTutor.github.io/react_9class/img/';
-    //const baseURL = 'http://localhost:3000/react_9class#/img/'
+    const baseURL = 'https://dearnono2.github.io/cering-redux/img/';
+    // const baseURL = 'http://localhost:3000/cering-redux/img/'
     const imgs = [
-      baseURL + 'Gallery.jpg',
+      // 로딩 작동을 위해 필요없지만 임시로 넣은 이미지
+      baseURL + 'visual.jpg',
+      // 서브페이지별로 넣을 이미지가 필요하면 후에 추가하자
     ];
     const vids = [
-      baseURL + 'vid2.mp4'
+      // 로딩 작동을 위해 필요없지만 임시로 넣은 영상
+      baseURL + 'video.mp4',
     ];
 
     createDOM();
@@ -119,7 +122,7 @@
         imgDOM.forEach(img => {
           img.onload = () => {
             countImg++;
-            //console.log('img loaded', countImg);
+            // console.log('img loaded', countImg);
             if (countImg === imgs.length) res(true);
           }
         })
