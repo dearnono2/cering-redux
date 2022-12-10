@@ -7,8 +7,8 @@ function News() {
 
   const getLocalData = () => {
     const dummyPosts = [
-      // {title: 'Hello5', content: 'Here comes description in details'},
-      // {title: 'Hello4', content: 'Here comes description in details'},
+      {title: 'Hello5', content: 'Here comes description in details'},
+      {title: 'Hello4', content: 'Here comes description in details'},
       {title: 'Hello3', content: 'Here comes description in details'},
       {title: 'Hello2', content: 'Here comes description in details'},
       {title: 'Hello1', content: 'Here comes description in details'},
