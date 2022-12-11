@@ -111,7 +111,7 @@ export default function Gallery() {
 					<div className="controls">
 						<nav>
 							<button onClick={showInterest}>Interest Gallery</button>
-							<button onClick={showMine}>My Gallery</button>
+							<button onClick={showMine}>Our Gallery</button>
 						</nav>
 
 						<div className="searchBox">
