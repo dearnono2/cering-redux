@@ -25,11 +25,12 @@ export default function Contact() {
 
     // email 인증은 8글자 이상, @가 있어야 한다.
     if(value.email.length < 8 || !/@/.test(Val.email)) {
-      errs.email = '이메일은 8글자 이상 @를 포함하세요'
+      errs.email = 'Email address must has at least 8 characters, and inclue @';
     }
 
+    // comments는 20자 이상 남겨주세요
     if(Val.comments.length < 20) {
-      errs.comments = '남기는 말을 20글자 이상 입력하세요';
+      errs.comments = 'Please enter at least 20 characters';
     }
 
     return errs;
@@ -77,7 +78,7 @@ export default function Contact() {
   useEffect(() => {
     const len = Object.keys(Err).length;
     if(len === 0 && Submit) {
-      alert('전송 완료하였습니다. 메인페이지로 이동합니다.');
+      alert('Success! You will move to the main page');
       history.push('/');
     }
   }, [Err]);
