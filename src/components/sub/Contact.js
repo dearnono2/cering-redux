@@ -25,7 +25,7 @@ export default function Contact() {
 
     // email 인증은 8글자 이상, @가 있어야 한다.
     if(value.email.length < 8 || !/@/.test(Val.email)) {
-      errs.email = 'Email address must has at least 8 characters, and inclue @';
+      errs.email = 'Email address must has at least 8 characters, and include @';
     }
 
     // comments는 20자 이상 남겨주세요
