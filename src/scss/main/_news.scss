@@ -1,10 +1,8 @@
 #news {
-  width: 100%; height: 100%;
-  // background: #c6ffc6;
+  width: 100%; 
+  height: 100%;
   position: relative;
   padding: 10vw 10vw 5vw;
-
-
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -62,8 +60,17 @@
 // tablet 
 @media screen and (max-width: $tablet) {
   #news {
+    padding: 10vw 5vw 5vw;
     article {
-      width: 40%;
+      width: calc(50% - 20px);
+      height: fit-content;
+      margin: 20px 10px 30px;
+      .random-img {
+        height: 220px;
+        img {
+          width: 100%; height: 100%;
+        }
+      }
     }
   }
 }
@@ -76,6 +83,9 @@
     }
     article {
       width: 80%;
+      .random-img {
+        height: 280px;
+      }
     }
   }
 }

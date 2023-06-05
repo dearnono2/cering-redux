@@ -4,7 +4,6 @@
   transform: translateY(-50%);
   right: 50px;
   z-index: 3;
-
   li {
     width: 10px; height: 10px;
     border: 1px solid #111;
@@ -22,6 +21,12 @@
 
 @media screen and (max-width: $tablet) {
   .scroll_navi {
-    right: 23px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .scroll_navi {
+    right: 0px;
   }
 }

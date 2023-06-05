@@ -127,7 +127,6 @@ section {
       width: 100%;
       padding: 20px;
       .about-content {
-        // flex-direction: column;
         .about-content-left {
           width: 50%;
           p {
@@ -138,6 +137,7 @@ section {
         }
         .about-content-right {
           width: 50%;
+          padding-left: 30px;
         }
       }
       .about-brands-logo {
