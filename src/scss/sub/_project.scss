@@ -12,11 +12,10 @@
       width: 100%; height: 600px;
       padding: 20px 0; 
       position: relative;
-      // display: flex;
-      // flex-wrap: wrap;
-      // justify-content: space-between;
       margin: 40px 0 130px;
-      
+      &:first-of-type {
+        margin-top: 0;
+      }
       h3 {
         position: absolute;
         top: 50%; right: 10px;

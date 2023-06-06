@@ -1,6 +1,7 @@
 #visual {
   .inner {
-    width: 1180px;
+    max-width: 1180px; 
+    width: 100%;
     padding-top: 180px;
     margin: 0 auto;
     .text-box {

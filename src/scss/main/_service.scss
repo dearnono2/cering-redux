@@ -1,13 +1,13 @@
 section {
   width: 100%;
-  // background: #f2f2f2;
   .inner {
-    width: 1180px;
+    max-width: 1180px; 
+    width: 100%;
     // main page의 services영역 text 부분
     .service-header-text {
       display: flex;
       justify-content: space-between;
-      h2 {
+      h3 {
         font-size: 20px;
       }
       p {
