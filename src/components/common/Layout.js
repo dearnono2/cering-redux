@@ -13,9 +13,6 @@ function Layout(props) {
       {/* 서브페이지 상단 공통 부분 */}
       <figure>
         <video src={process.env.PUBLIC_URL + `/img/video.mp4`} loop autoPlay muted alt={props.name} />
-        <div className="inner">
-          <h2>{props.name}</h2>
-        </div>
       </figure>
       {/* 여기서부턴 서브페이지 각각의 디자인 */}
       <div className="sub-contents">

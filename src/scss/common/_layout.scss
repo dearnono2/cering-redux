@@ -10,38 +10,37 @@
       object-fit: cover;
       filter: grayscale(1);
     }
+  }
+  .sub-contents {
     > .inner {
-      width: 1180px;
-      min-height: 400px;
+      max-width: 1180px;
+      width: 100%;
       margin: 100px auto 150px;
       position: relative;
       opacity: 0;
       transform: translateY(100px);
-      // transition: opacity 0.5s, transform 1s;
       transition: 0.5s;
       h2 {
-        font: normal 60px/1 'work sans';
+        display: inline-block;
+        font-weight: 800;
+        font-size: 60px;
         color: #111;
         margin-bottom: 70px;
-        &::after {
-          content: '';
-          display: block;
-          width: 60px; height: 1px;
-          background: #555;
-          margin-top: 20px;
-        }
+        padding-bottom: 20px;
+        border-bottom: 3px solid #000;
       }
     }
   }
   &.on {
     figure {
       opacity: 1;
+    }
+    .sub-contents {
       > .inner {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
   }
 }
 
@@ -54,6 +53,18 @@
       width: 100%;
       margin: 80px auto 120px;
       padding: 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .content {
+    .sub-contents {
+      .inner {
+        h2 {
+          font-size: 38px;
+        }
+      }
     }
   }
 }

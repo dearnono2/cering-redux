@@ -17,10 +17,10 @@ export default function About() {
   return (
     // 최상단 영역
     <Layout name={'About'}>
+      <div className="inner">
+        <h2>● CRAFTING DIGITAL EXPERIENCES</h2>
+      </div>
       <section className="sub-visual">
-        <div className="inner">
-          <h2>● CRAFTING DIGITAL EXPERIENCES</h2>
-        </div>
         <div className="coworker-pic">
           <img src={process.env.PUBLIC_URL + '/img/coworker.jpg'} alt="coworker picture" />
         </div>
